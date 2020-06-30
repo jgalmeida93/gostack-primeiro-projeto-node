@@ -5,9 +5,12 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev:server": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts"
+    "dev:server": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
+    "commit": "git cz"
   },
   "dependencies": {
+    "commitizen": "^4.1.2",
+    "cz-emoji": "^1.2.1",
     "date-fns": "^2.14.0",
     "express": "^4.17.1",
     "uuidv4": "^6.1.1"
@@ -25,5 +28,10 @@
     "prettier": "^2.0.5",
     "ts-node-dev": "^1.0.0-pre.49",
     "typescript": "^3.9.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-emoji"
+    }
   }
 }
