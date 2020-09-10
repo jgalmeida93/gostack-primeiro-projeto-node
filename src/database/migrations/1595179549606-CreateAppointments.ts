@@ -13,10 +13,22 @@ export default class CreateAppointments1595179549606
             isPrimary: true,
             generationStrategy: 'uuid',
           },
+          {
+            name: 'provider',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
+            name: 'date',
+            type: 'timestamp with time zone',
+            isNullable: false,
+          },
         ],
       }),
     );
   }
 
-  public async down(queryRunner: QueryRunner): Promise<void> {}
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.dropTable('appointments');
+  }
 }
